@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/userpanel.css" />
+    <%- include ('partials/head') %>
+  </head>
+  <body>
+    <%- include ('partials/navbar') %> 
+
+    <div class="content">
+      <!-- NEW USERS -->
+      <div class="newuserwrapper">
+        <form action="/adminpanel" method="POST">
+          <p class="newuserpaneltitle">crea un nuevo usuario</p>
+          <div class="user">
+            <!-- <p>nombre del nuevo usuario</p> !-->
+            <input
+              type="text"
+              name="username"
+              class="userinput"
+              placeholder="nombre del nuevo usuario"
+            />
+          </div>
+          <div class="password">
+            <!-- <p>contraseña para el nuevo usuario</p> !-->
+            <input
+              type="password"
+              name="password"
+              class="inputpaswword"
+              placeholder="contraseña del nuevo usuario"
+            />
+          </div>
+          <div class="sutmit">
+            <a href="#"
+              ><button type="submit" class="sutmitbutton">CREAR</button></a
+            >
+          </div>
+        </form>
+
+        <% if (registererror) { %>
+
+          <div class="registererror"> <%= registererror %>  </div>
+
+        <% } %>
+
+
+
+      </div>
+      <!-- USER ADMINISTRATION -->
+      <form action="/finduser" method="POST" >
+            
+        <div class="adminuserwrapper">
+            <div class="find">
+
+                <div class="userfind"> 
+                    <input type="text" name="fidnusername" id="findusername" class="finduser" placeholder="ingresa el nombre de usuario a buscar" />
+                </div>
+                <div class="sendfind">
+                    <input type="submit" name="findusersend" id="findusersend" class="findusersutmit" placeholder="Buscar"> 
+                </div>
+                    
+                
+            </div>
+        </div>
+    
+
+    </form>
+    <%- include ('partials/footer') %>
+  </body>
+</html>
+

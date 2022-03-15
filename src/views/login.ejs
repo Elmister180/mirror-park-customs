@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <%- include ('partials/head') %>
+    <link rel="stylesheet" href="css/login.css" />
+</head>
+
+<body>
+  <% if (registererror) { %>
+
+    <div class="loginerror"> <%= registererror %>  </div>
+
+  <% } %>
+
+  <div class="wrapper">
+    <form action="/" method="POST">
+      <div class="user">
+        <% if (usernameerror) { %>
+
+          <div class="usernameerror">
+            <%= usernameerror %>
+          </div>
+        
+          <% } %>
+            <% if (passworderror) { %>
+
+              <div class="passworderror">
+                <%= passworderror %>
+              </div>
+            
+              <% } %>
+        <!-- <p>nombre de usuario</p> !-->
+        <input type="text" name="username" class="userinput" placeholder="nombre de usuario" />
+      </div>
+      <div class="password">
+
+        <!-- <p>contraseña</p> !-->
+        <input type="password" name="password" class="inputpaswword" placeholder="contraseña" />
+      </div>
+      <div class="sutmit">
+        <a href=""><button type="submit" class="sutmitbutton">ACEDER</button></a>
+      </div>
+      <div class="info">
+        <p>¿no dispones de una cuenta o tienes porbelmas para entrar?</p>
+        <href href="#" onclick="info()">
+          <p class="click-aqui" ondragstart="return false" onselectstart="return false" oncontextmenu="return false">
+            INFO</p>
+        </href>
+      </div>
+    </form>
+  </div>
+  <%- include ('partials/footer') %>
+    <script>
+      function info() {
+        swal({
+          title: "procedimiento",
+          text: "Contacta con nosotrs mediante un tiket en discord para obtener tus credenciales",
+          icon: "info",
+          button: "entendido",
+        });
+      }
+    </script>
+</body>
+
+
+
+
+
+</html>

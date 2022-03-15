@@ -1,0 +1,53 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+
+
+.select {
+    margin-top: 20px;
+    margin-left: 100px;
+    font-family: "Shrikhand", cursive;
+    text-align: center;
+}
+
+ul, ol {
+    list-style:none;
+}
+
+
+.nav > li {
+    float:unset;
+}
+
+.nav li a {
+    background-color: rgba(0, 0, 0, 0.5);
+    color:white;
+    text-decoration:none;
+    padding:10px 12px;
+    display:block;
+    width: 300px;
+}
+
+.nav li a:hover {
+    background-color: green;
+}
+
+.nav li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+
+.nav li:hover > ul {
+    display:block;
+}
+
+
+
+.grafico {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 900px;
+    margin-left: 400px;
+    margin-top: 10px;
+}

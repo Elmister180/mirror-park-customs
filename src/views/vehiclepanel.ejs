@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/vehiclepanel.css" />
+    <%- include ('partials/head') %>
+</head>
+
+<body>
+    <%- include ('partials/navbar') %>
+
+            <!-- NEW VEHICLE -->
+            
+                <form action="/vehiclepanel" method="POST" >
+                    <p class="newvehiclepaneltitle">añadir un nuevo usuario</p>
+                    <div class="vehicle">
+                        <div class="nombrevehiculo">
+                        <input type="text" name="vehicle" class="vehicleinput"
+                            placeholder="nombre del nuevo vehiculo" />
+                        </div>
+
+                        <div class="tipo">
+                            <input list="tipo" placeholder="selecione el tipo">
+                            <datalist id="tipo">
+                                <option value="coche">
+                                <option value="moto">
+                                <option value="otros">
+                            </datalist>
+                        </div>
+
+                        <div class="gama">
+                            <input list="gama" placeholder="seleciona la gama ">
+                            <datalist id="gama">
+                                <option value="alta">
+                                <option value="media">
+                                <option value="baja">
+                            </datalist>
+                        </div>
+                        <div class="send">
+                        <input type="submit" name="sutmit" id="sutmit" placeholder="añadir vehiculo a la lista" >
+                        </div>
+                    </form>
+    
+
+                    </div>
+
+
+
+
+
+
+            
+            <!-- USER ADMINISTRATION -->
+
+            <form action="/findvehicle" method="POST" >
+            
+                <div class="adminuserwrapper">
+                    <div class="find">
+    
+                        <div class="userfind"> 
+                            <input type="text" name="findvehiclename" id="findvehiclename" class="finduser" placeholder="ingresa el nombre de usuario a buscar" />
+                        </div>
+                        <div class="sendfind">
+                            <input type="submit" name="findvehiclesend" id="findvehiclesed" class="findusersutmit" placeholder="Buscar"> 
+                        </div>
+                            
+                        
+                    </div>
+                </div>
+            
+
+            </form>
+
+
+        <%- include ('partials/footer') %>
+</body>
+
+</html>
+
