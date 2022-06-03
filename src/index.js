@@ -42,7 +42,6 @@ app.use((req, rep, next) => {
 app.use(require('./routes'));
 
 // static files //
-
 app.use(express.static (path.join(__dirname, 'public')));
 
 // app listenig // 

@@ -18,8 +18,6 @@ passport.deserializeUser(async (id, done) => {
 
 // registro //
 
-
-
 passport.use('local-register', new localstrategy ({
     usernameField: 'username',
     passwordField: 'password',
@@ -42,7 +40,6 @@ passport.use('local-register', new localstrategy ({
 
 
 // login //
-
 
 passport.use('local-login', new localstrategy({
     usernameField: 'username',
